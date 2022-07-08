@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicia Sesion</title>
+    <link rel="stylesheet" href="{% static 'core/css/estilo_login.css' %}">        
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.6.0.min.js">
+   
+</head>
+<body>
+    <link rel="stylesheet" href="https://code.jquery.com/jquery-3.6.0.min.js">
+    <div class="form_wrapper">
+        <div class="form_container">
+          <div class="title_container">
+            <h2>Inicia Sesión</h2>
+          </div>
+          
+          <div class="row clearfix">
+            <div class="">
+
+              <form action="" method="post">
+                {% csrf_token %}
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                  <input type="text" name="correo" id="email" placeholder="Correo Electronico"  />
+                </div>
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                  <input type="password" name="password" placeholder="Contraseña"  />
+                </div>
+                <button class="send" type="submit">Enviar</button>
+                <a href="{% url 'registroUsuario' %}" style="font-size: 1.1em; color: black; font-style: italic; margin-left: 10px;">Registrarse</a>
+                {% if messages %}
+                {% for m in messages %}
+                <h3>{{m}}</h3>
+                {% endfor %}
+                {% endif %}
+              </form>
+
+            </div>
+          </div>
+        </div>
+        <p class="credit text-muted">Desarrollado por JR.ltda.</p>
+      </div>
+      
+
+
+      <script>
+        $(document).ready(function() {
+        $('#send').click(function(){
+            if($("#email").val().indexOf('@', 0) == -1 || $("#email").val().indexOf('.', 0) == -1) {
+    
+                alert('El correo electrónico introducido no es correcto.');
+                return false;
+            }
+            alert('El email introducido es correcto.');
+        });
+      });
+      
+      </script>
+</body>
+</html>

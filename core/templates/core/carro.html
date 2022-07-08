@@ -1,0 +1,115 @@
+{% extends 'core/plantilla.html' %}
+{% load static %}
+{% block contenido %}
+    <div class="" id="contedor_carro" style="display: flex; margin-bottom: 20px; ">
+        <div id="contenedor_info" class="col-7"
+            style="margin-left:10px; margin-top:40px; justify-content: flex-end; display: grid;">
+            <div
+                style="background-color: #97DBAE; border-radius: 10px 10px 10px 10px;-moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px;border: 10 px solid #97DBAE; display: flex; justify-content:center;">
+                <h4 style=" color:black; font-family: 'Abril Fatface', cursive;">Información de Contacto</h4>
+            </div>
+            <label for="inp" class="inp">
+                <input type="text" id="inp" placeholder="&nbsp;">
+                <span class="label">Correo Electronico</span>
+                <span class="focus-bg"></span>
+            </label>
+            <br>
+            <label for="check" style="text-align: center;">
+                <input type="checkbox" name="enviar_novedades" id="enviar_novedades"> Enviarme novedades y ofertas por correo electrónico</label>
+            <br>
+            <div
+                style="background-color: #97DBAE; border-radius: 10px 10px 10px 10px;-moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px;border: 10 px solid #97DBAE; display: flex; justify-content:center;">
+                <h4 style=" color:black; font-family: 'Abril Fatface', cursive;">Información de Despacho</h4>
+            </div>
+            <label for="inp" class="inp">
+                <input type="text" id="inp" placeholder="&nbsp;">
+                <span class="label">Nombre</span>
+                <span class="focus-bg"></span>
+            </label>
+            <br>
+            <label for="inp" class="inp">
+                <input type="text" id="inp" placeholder="&nbsp;">
+                <span class="label">Apellidos</span>
+                <span class="focus-bg"></span>
+            </label>
+            <br>
+            <label for="inp" class="inp">
+                <input type="text" id="inp" placeholder="&nbsp;">
+                <span class="label">Dirección</span>
+                <span class="focus-bg"></span>
+            </label>
+            <br>
+            <label for="inp" class="inp">
+                <input type="text" id="inp" placeholder="&nbsp;">
+                <span class="label">Ciudad</span>
+                <span class="focus-bg"></span>
+            </label>
+            <br>
+            <label for="inp" class="inp">
+                <input type="text" id="inp" placeholder="&nbsp;">
+                <span class="label">Comuna</span>
+                <span class="focus-bg"></span>
+            </label>
+            <br>
+            <label for="inp" class="inp">
+                <input type="text" id="inp" placeholder="&nbsp;">
+                <span class="label">Región</span>
+                <span class="focus-bg"></span>
+            </label>
+            <br>
+            <label for="inp" class="inp">
+                <input type="text" id="inp" placeholder="&nbsp;">
+                <span class="label">Teléfono</span>
+                <span class="focus-bg"></span>
+            </label>
+            <br>
+            <label for="check2" style="text-align: center;">
+                <input type="checkbox" name="guardar_informacion" id="guardar_informacion"> Guardar mi Información y
+                consultar más rapidamente la proxima vez</label>
+            <br>
+            <br>
+            <br>
+            <div id="confi" style="display: flex; justify-content: space-between;">
+                <button class="raise">
+                    Pasar por caja
+                </button>
+                <button class="raise">
+                    Volver al Carrito
+                </button>
+            </div>
+
+        </div>
+        <div class="col" style="background-color: #97DBAE;">
+            <div id="lista_productos" style="margin: 3%; display: flex; justify-content: space-around; flex-direction:column ; border-style: solid; border-color: #000000; border-top: 0;border-left: 0;border-right: 0; padding-bottom: 50px;">
+               {% include "core/widget.html" %}
+            </div>
+            <div class="text-center" style="margin: 3%; padding-top: 10px; align-items: center; display: flex; justify-content: center; border-style: solid; border-color: #000000; border-top: 0;border-left: 0;border-right: 0; padding-bottom: 50px;">
+                <input type="text" placeholder="Ingresa tu cupón de descuento o promoción" style="height: 40px; width: 720px;border-radius: 10px 10px 10px 10px;
+                -moz-border-radius: 10px 10px 10px 10px;
+                -webkit-border-radius: 10px 10px 10px 10px;
+                border: 0px solid #000000; margin-right: 10px;"><button class="btn btn-outline-success text-center"
+                    style="border-radius: 10px 10px 10px 10px;
+                    -moz-border-radius: 10px 10px 10px 10px;
+                    -webkit-border-radius: 10px 10px 10px 10px;
+                    border: 1px solid green">Canjear</button>
+            </div>
+            <div class="row" style="margin: 3%; border-style: solid; border-color: #000000; border-top: 0;border-left: 0;border-right: 0; padding-bottom: 50px;">
+                <div class="col" style="display: grid;">
+                    <label class="text-muted" for="subtotal" style="font-size: 1.2em;">Subtotal</label>
+                    <br>
+                    <label class="text-muted" for="despacho" style="font-size: 1.2em;">Descuento</label>              
+                </div>
+                <div class="col" style="display: grid; justify-content: flex-end;">
+                    <label for="valor_subtotal" style="font-size: 1.2em;">${{importe_total_carro}}</label>
+                    <br>
+                    <label for="valor_despacho" style="font-size: 1.2em;">$0</label>
+                </div>
+            </div>
+            <div id="total" style="margin: 5%;display: flex; justify-content: space-between; font-size: 1.5em;">
+                <label for="total">Total</label>
+                <label for="valor_total">${{importe_total_carro}}</label>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

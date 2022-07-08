@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrate</title>
+    <link rel="stylesheet" href="{% static 'core/css/estilo_registro.css' %}">
+</head>
+<body>
+
+  <div class="form_wrapper">
+    <div class="form_container">
+      <div class="title_container">
+        <h2>Registrate</h2>
+      </div>
+      <div class="row clearfix">
+        <div class="">
+          <form action="" method="post">
+            {% csrf_token %}
+            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+              <input type="email" name="correo" placeholder="Correo Electronico" required />
+            </div>
+            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+              <input type="password" name="password" placeholder="Contraseña" required />
+            </div>
+            </div>
+            <div class="row clearfix">
+              <div class="col_half">
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                  <input type="text" name="firstName" placeholder="Nombres" />
+                </div>
+              </div>
+              <div class="col_half">
+                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                  <input type="text" name="lastName" placeholder="Apellidos" required />
+                </div>
+              </div>
+            </div>
+            <input class="button" type="submit" value="Registrarse" style="color: black;"/>
+            {% if messages %}
+                {% for m in messages %}
+                <h3>{{m}}</h3>
+                {% endfor %}
+            {% endif %}
+          </form>
+          <p class="credit text-muted">Desarrollado por JR.ltda.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

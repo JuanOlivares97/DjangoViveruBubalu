@@ -1,0 +1,36 @@
+{% extends 'core/plantilla.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block contenido %}
+
+<div class="agregar" style="justify-content:center;display:grid;flex-direction: column ;margin-top: 20px ;">
+    <h1 class="text-center" style=" color:#8a2be2; font-family: 'Abril Fatface', cursive;">¿Desea agregar una Promoción?</h1>
+    <button class="btn btn-primary" style="width:200px ; margin-left: 30%;"><a href="{% url 'agregar_promocion' %}" style="text-decoration:  none; color:black ; font-weight: bold;">Agregar</a></button>
+
+</div>
+<table class="table" style="margin-top: 20px ;">
+    <thead>
+      <tr>
+        <th class="table-primary" scope="col">Código Promocion</th>
+        <th class="table-primary" scope="col">Nombre Promocion</th>
+        <th class="table-primary" scope="col">Porcentaje</th>
+        <th class="table-primary" scope="col">Fecha Inicio</th>
+        <th class="table-primary" scope="col">Fecha Termino</th>
+        <th class="table-primary" scope="col">Editar</th>
+      </tr>
+    </thead>
+{% for i in promociones  %}
+    <tbody>
+      <tr>
+        <th scope="row" class="table-success">{{i.id_promocion}}</th>
+        <td class="table-success">{{i.nom_promocion}}</td>
+        <td class="table-success">{{i.porcentaje}}</td>
+        <td class="table-success">{{i.fecha_ini}}</td>
+        <td class="table-success">{{i.fecha_termino}}</td>
+        <td class="table-success"><button class="btn btn-primary"><a href="{% url 'modificar_promocion' i.id_promocion %}" style="text-decoration: none; color: black; font-weight:bold; ">Modificar</a></button>
+            <Button class="btn btn-danger"><a href="{% url 'eliminarPromocion' i.id_promocion %}" style="text-decoration: none; color: black; font-weight:bold; ">Eliminar</a></td>
+      </tr>
+    </tbody>
+    {% endfor %}
+</table>
+{% endblock %}

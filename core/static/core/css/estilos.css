@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.collapsed {
+  display: none;
+}
+.header2_mobile{
+  display: none;
+}
+.menu>button>a:hover {
+    text-decoration: none;
+    border-style: solid;
+    border-top: blueviolet;
+    border-left: blueviolet;
+    border-right: blueviolet;
+    padding-bottom: 8px;
+
+}
+
+#pie>h6 {
+    font-size: 2em;
+}
+div.blueTable {
+    border: 0px solid #97DBAE;
+    background-color: #97DBAE;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+  }
+  .divTable.blueTable .divTableCell, .divTable.blueTable .divTableHead {
+    border: 2px solid #f1e1a6;
+    padding: 3px 2px;
+  }
+  .divTable.blueTable .divTableBody .divTableCell {
+    font-size: 14px;
+  }
+  .divTable.blueTable .divTableRow:nth-child(even) {
+    background: #97DBAE;
+  }
+  .divTable.blueTable .divTableCell:nth-child(even) {
+    background: #97DBAE;
+  }
+  .divTable.blueTable .divTableHeading {
+    background: #8A2BE2;
+    background: -moz-linear-gradient(top, #a760e9 0%, #9540e5 66%, #8A2BE2 100%);
+    background: -webkit-linear-gradient(top, #a760e9 0%, #9540e5 66%, #8A2BE2 100%);
+    background: linear-gradient(to bottom, #a760e9 0%, #9540e5 66%, #8A2BE2 100%);
+    border-bottom: 2px solid #444444;
+  }
+  .divTable.blueTable .divTableHeading .divTableHead {
+    font-size: 15px;
+    font-weight: bold;
+    color: #E2E2E2;
+    border-left: 2px solid #D0E4F5;
+  }
+  .divTable.blueTable .divTableHeading .divTableHead:first-child {
+    border-left: none;
+  }
+  
+  .blueTable .tableFootStyle {
+    font-size: 14px;
+  }
+  .blueTable .tableFootStyle .links {
+       text-align: center;
+  }
+  .blueTable .tableFootStyle .links a{
+    display: inline-block;
+    background: #1C6EA4;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+  }
+  .blueTable.outerTableFooter {
+    border-top: none;
+  }
+  .blueTable.outerTableFooter .tableFootStyle {
+    padding: 3px 5px; 
+  }
+  /* DivTable.com */
+  .divTable{ display: table; }
+  .divTableRow { display: table-row; }
+  .divTableHeading { display: table-header-group;}
+  .divTableCell, .divTableHead { display: table-cell;}
+  .divTableHeading { display: table-header-group;}
+  .divTableFoot { display: table-footer-group;}
+  .divTableBody { display: table-row-group;}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(5, 2fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  height: 100%;
+  margin-bottom: 50px;
+  }
+
+
+  @media screen and (max-width: 1280px) {
+    .main {
+      display: grid;
+      grid-template-columns: repeat(3, 2fr);
+      grid-gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+      height: 100%;
+      }
+    
+  }
+  @media screen and (max-width: 720px) {
+    .main {
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+      grid-gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+      height: 100%;
+      }
+    #suscribirse>#texto_sub{
+      display: none;
+    }
+    #img_foot{
+    display: flex;
+    margin-left: 25px;
+    }
+    #pie>#legal{
+      display: none;
+    }
+    .body .contenedor .imagen{
+      height: auto;
+    }
+    .header2_mobile .links{
+      flex-direction: column;
+    }
+    .header2_desktop{
+      display: none !important;
+    }
+    #suscribirse>#mail>input{
+      width: 250px !important; 
+    }
+    .header2_mobile{
+      display: block !important;
+    }
+    #menu_mobile>button>a:hover {
+      text-decoration: none;
+      border-style: solid;
+      border-top: blueviolet;
+      border-left: blueviolet;
+      border-right: blueviolet;
+      padding-bottom: 8px;
+  }
+  #img_tabla{
+    display: none;
+  }
+  #nro_fila{
+    display: none;
+  }
+  #subtotal{
+    display: none;
+  }
+  #crud_producto{
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+  #crud_producto>#inp1{
+    margin: none !important;
+    margin: 5px;
+    padding: 5px;
+  }
+  }

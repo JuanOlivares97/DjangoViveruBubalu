@@ -1,0 +1,103 @@
+{% extends 'core/plantilla.html' %}
+{% load static %}
+{% block contenido %}
+
+    <div id="tabla_productos" style="display: flex; justify-content: center; margin-bottom: 50px;margin-top: 10px;">
+        <div class="divTable blueTable" style="width: 100%;">
+            <div class="divTableHeading">
+                <div class="divTableRow">
+                    <div class="divTableHead" id="nro_fila">Nro Fila</div>
+                    <div class="divTableHead">ID Compra</div>
+                    <div class="divTableHead">Productos</div>
+                    <div class="divTableHead" id="subtotal">Subtotal</div>
+                    <div class="divTableHead">Total</div>
+                    <div class="divTableHead" id="img_tabla">Imagen Referencial</div>
+                    <div class="divTableHead">Estado</div>
+                    <div class="divTableHead">Opciones</div>
+
+                </div>
+            </div>
+            <div class="divTableBody">
+                <div class="divTableRow">
+                    <div class="divTableCell" id="nro_fila">1</div>
+                    <div class="divTableCell">A1A1A1</div>
+                    <div class="divTableCell">Alyssum Maritimum <br>Aquilegia hybrida </div>
+                    <div class="divTableCell" id="subtotal">$2000</div>
+                    <div class="divTableCell">$2480</div>
+                    <div class="divTableCell" id="img_tabla">
+                        <img src="images/alyssum.jpg" alt="" style="width: 100px; height: auto;">
+                    </div>
+                    <div class="divTableCell"><button class="btn btn-secondary" style="height: 40px; width: 70px; font-size: 10px;">En proceso</button></div>
+                    <div class="divTableCell">
+                        <a href="#"><span class="material-icons" style=" color: BLACK;">
+                            download</span></a>
+                        <a href="#"><span class="material-icons" style=" color: BLACK;">
+                            preview</span></a>
+                        <a href="#"><span class="material-icons" style=" color: BLACK;">
+                            grade</span></a>
+
+                    </div>
+                </div>
+                
+                <div class="divTableRow">
+                    <div class="divTableCell" id="nro_fila">2</div>
+                    <div class="divTableCell">A1A1A2</div>
+                    <div class="divTableCell">Aquilegia hybrida</div>
+                    <div class="divTableCell" id="subtotal">$1000</div>
+                    <div class="divTableCell">$1190</div>
+                    <div class="divTableCell" id="img_tabla"><img src="images/aquilegia.jpg" alt=""
+                            style="width: 100px; height: auto;"></div>
+                        <div class="divTableCell"><button class="btn btn-success" style="height: 30px; width: 70px; font-size: 10px;">PAGADA</button></div>
+                        <div class="divTableCell">
+                            <a href="#" ><span class="material-icons" style=" color: BLACK;">
+                                download</span></a>
+                            <a href="#"><span class="material-icons" style=" color: BLACK;">
+                                preview</span></a>
+                            <a href="#"><span class="material-icons" style=" color: BLACK;">
+                                grade</span></a>
+    
+                        </div>
+                </div>
+                    <div class="divTableCell" id="nro_fila">3</div>
+                    <div class="divTableCell">A1A1A3</div>
+                    <div class="divTableCell">Aster Alpinus <br> Aquilegia hybrida</div>
+                    <div class="divTableCell" id="subtotal">$10000</div>
+                    <div class="divTableCell">$11900</div>
+                    <div class="divTableCell" id="img_tabla"><img src="images/aster.jpg" alt="" style="width: 100px; height: auto;">
+                    </div>
+                    <div class="divTableCell"><button class="btn btn-danger" style="height: 30px; width: 70px; font-size: 10px;">Cancelada</button></div>
+                    <div class="divTableCell">
+                        <a href="#"><span class="material-icons" style=" color: BLACK;">
+                            download</span></a>
+                        <a href="#"><span class="material-icons" style=" color: BLACK;">
+                            preview</span></a>
+                        <a href="#"><span class="material-icons" style=" color: BLACK;">
+                            grade</span></a>
+
+                    </div>
+                </div>
+                <div class="divTableRow">
+                    <div class="divTableCell" id="nro_fila">4</div>
+                    <div class="divTableCell">A1A1A4</div>
+                    <div class="divTableCell">Sutera Cordata</div>
+                    <div class="divTableCell" id="subtotal">$5000</div>
+                    <div class="divTableCell">$5590</div>
+                    <div class="divTableCell" id="img_tabla"><img src="images/sutera.jpg" alt="" style="width: 100px; height: auto;">
+                    </div>
+                    <div class="divTableCell"><button class="btn btn-success" style="height: 30px; width: 70px; font-size: 10px;">PAGADA</button></div>
+                    <div class="divTableCell">
+                       <a href="#"> <span class="material-icons" style=" color: BLACK;">
+                            download</span></a>
+                        <a href="#"><span class="material-icons" style=" color: BLACK;">
+                            preview</span></a>
+                        <a href="#"><span class="material-icons" style=" color: BLACK;">
+                            grade</span></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'core/plantilla.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block contenido %}
+<div class="body">
+    <div class="contenedor" style="display: flex; justify-content: center;">
+        <img class="imagen" src="{% static 'core/img/ola.png' %}" alt="" style="height: 40vmax; margin-top: 10px ;">
+    </div>
+
+    <div id="catalogo">
+        <br>
+        <div id="titulo_catalogo">
+            <h1
+                style="justify-content: center; display: flex; color: blueviolet; font-family: 'Abril Fatface', cursive;">
+                ¿Que estás buscando?
+           
+        </h1>
+        </div>
+        <br>
+        <div class="main">
+            {% for i in productos %}
+            <div>
+                <div class="card border-success" style="height: 100%;">
+                    <img src="{{i.img_producto}}" class="img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center" style=" font-family: 'Abril Fatface', cursive;">
+                            {{i.nom_producto}}</h5> 
+                    </div>
+                    <div class="card-body" style="bottom: 100%;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <div class="text-muted">Stock {{i.stock}}</div>
+                            <div class="text-muted">${{i.precio}}</div>
+                        </div>
+                        <div >
+                            <a href="{% url 'carrito:agregar' i.id_producto %}" class="btn btn-outline-secondary"
+                                style="display: flex; justify-content: center;"><img
+                                    src="{% static 'core/img/icons8_shopping_cart_25px.png' %}" alt=""
+                                    style="margin-right: 5px; width: 15%; height: auto;">Añadir al Carrito</a>
+                            </div>
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}

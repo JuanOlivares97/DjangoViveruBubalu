@@ -1,0 +1,32 @@
+{% extends 'core/plantilla.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block contenido %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <div id="tabla1">
+    <div style="display: flex;justify-content: center; margin-top: 50px;">
+        <div
+            style="background-color: #97DBAE; border-radius: 40px 40px 40px 40px;-moz-border-radius: 40px 40px 40px 40px; -webkit-border-radius: 40px 40px 40px 40px;border: 10px solid #97DBAE;">
+            <h1 class="" style=" color:#8a2be2; font-family: 'Abril Fatface', cursive;">Agrega, Edita o Elimina un
+                Producto</h1>
+        </div>
+    </div>
+    
+    <form action="" method="POST" enctype="multipart/form-data" class="crud_producto">
+    {% csrf_token %}
+    {{ form|crispy}}
+    <div id="botones" style="display: flex; justify-content: space-evenly;align-items: center;">
+        <button type="submit" class="btn btn-success" style=" margin-bottom: 20px;"> Guardar </button>
+    </form>
+
+    </div>           
+    </div>
+</div>
+        
+
+
+        </div>
+    {% endblock %}
